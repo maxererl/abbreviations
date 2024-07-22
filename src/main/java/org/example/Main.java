@@ -87,7 +87,7 @@ public class Main {
                 writer.flush();
                 break;
             } catch (IOException e) {
-                System.out.println("Output file cannot be created, please enter different location");;
+                System.out.println("Output file cannot be created, please enter different location");
             }
         }
         sc.close();
