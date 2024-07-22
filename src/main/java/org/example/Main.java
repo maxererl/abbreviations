@@ -52,16 +52,6 @@ public class Main {
             while (matcher.find()) {
                 fullMean.add(matcher.group());
             }
-//            for (String abb : abbreviations) {
-//                String lowAbb = abb.toLowerCase();
-//                //"\\b(\\p{Lower}\\p{Upper}*\\s*)+" + abbreviation.toLowerCase() + "\\b"
-//                //lowAbb.charAt(0) + "\\w+ " + "\\[(" + lowAbb.substring(1) + "]\\w)+"
-//                String pattern = "(?<=\\()([^)]+)\\s*" + lowAbb + "\\)";
-//                matcher = Pattern.compile(pattern).matcher(line);
-//                while (matcher.find()) {
-//                    fullMean.add(matcher.group());
-//                }
-//            }
         }
         abbreviations.stream().parallel().forEach(abb -> outputMap.put(abb, fullMean.stream().filter(full -> isMatch(abb, full)).collect(Collectors.toMap(full -> full, full -> getProbability(abb, full)))));
 
