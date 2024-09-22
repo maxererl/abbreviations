@@ -1,3 +1,6 @@
+Code for finding abbreviations meanings in text
+
+Step-by-step guide:
 1. Enter the input file with text first
 2. Wait for the result
 3. Enter the output path if needed
